@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Query Selecor Demo</title>
+    <style>
+        td {
+            border-style: solid;
+            border-width: 1px;
+            font-size: 300%;
+        }
+        
+        td:hover {
+            background-color: cyan;
+        }
+        
+        #hoverResult {
+            color: green;
+            font-size: 200%;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <table>
+            <tr>
+                <td>A1</td>
+                <td>A2</td>
+                <td>A3</td>
+            </tr>
+            <tr>
+                <td>B1</td>
+                <td>B2</td>
+                <td>B3</td>
+            </tr>
+            <tr>
+                <td>C1</td>
+                <td>C2</td>
+                <td>C3</td>
+            </tr>
+        </table>
+        <div>
+            测试Query Selector
+        </div>
+        <button type="button" id="findHover" autofocus>Find 'td:hover' target</button>
+        <div id="hoverResult"></div>
+        <script type="text/javascript">
+            document.getElementById('findHover').onclick = function() {
+                var hovered = document.querySelector('td:hover');
+                if (hovered) {
+                    document.getElementById('hoverResult').innerHTML = hovered.innerHTML;
+                }
+            }
+        </script>
+    </section>
+
+
+
+
+</body>
+
+</html>
